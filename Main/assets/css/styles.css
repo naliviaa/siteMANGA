@@ -1,0 +1,2068 @@
+/**
+ * =================================================================================
+ * VARIABLES
+ * =================================================================================
+ */
+
+:root {
+    /* ===== COLORS ===== */
+    --overlay-color: rgba(42, 42, 42, .5);
+    --background-color: #191919;
+    --black-primary-color: #141415;
+    --black-secondary-color: #1a1b1c;
+    --blue-primary-color: #0aabfb;
+    --disabled-primary-color: #38383e;
+    --disabled-secondary-color: #7d7d7d;
+    --gray-primary-color: #cecece;
+    --gray-secondary-color: #b5b5b5;
+    --gray-tertiary-color: #c6c6c6;
+    --green-color: #04d354;
+    --orange-color: #ff8c2a;
+    --red-color: #f16165;
+    --white-color: #fff;
+
+    /* ===== BORDER RADIUS ===== */
+    --box-default-border-radius: 4px 12px 4px 12px;
+    --content-box-border-radius: 0 12px 4px 12px;
+    --content-box-title-border-radius: 0 0 4px 12px;
+    --header-input-border-radius: 3px 9px 3px 9px;
+    --highlights-chapter-box-border-radius: 0 10px 2px 0;
+    --mini-box-default-border-radius: 2px 6px 2px 6px;
+    --newly-added-chapter-box-border-radius: 0 0 7px 4px;
+    --footer-socials-border-radius: 2px 6px 2px 6px;
+
+    /* ===== FONTS ===== */
+    --font-pt-sans-narrow: 'PT Sans Narrow', sans-serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+    --font-roboto-condensed: 'Roboto Condensed', sans-serif;
+}
+
+/**
+ * =================================================================================
+ * MODIFIERS
+ * =================================================================================
+ */
+
+.box--active {
+    border: 2px solid var(--blue-primary-color) !important;
+    color: var(--blue-primary-color) !important;
+}
+
+.button--icon-height {
+    height: 36px !important;
+}
+
+.mb--0 {
+    margin-bottom: 0 !important;
+}
+
+.mb--20 {
+    margin-bottom: 20px !important;
+}
+
+.mb--40 {
+    margin-bottom: 40px !important;
+}
+
+.pt--18 {
+    padding-top: 18px !important;
+}
+
+.responsive--flex-1 {
+    flex: 0 !important;
+}
+
+.text--blue {
+    color: var(--blue-primary-color) !important;
+}
+
+.text--green {
+    color: var(--green-color) !important;
+}
+
+.text--orange {
+    color: var(--orange-color) !important;
+}
+
+.text--red {
+    color: var(--red-color) !important;
+}
+
+.text--white {
+    color: var(--white-color) !important;
+}
+
+/**
+ * =================================================================================
+ * BASE
+ * =================================================================================
+ */
+
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent !important;
+    box-sizing: border-box !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-roboto-condensed);
+    min-height: 100%;
+}
+
+/**
+ * =================================================================================
+ * COMPONENTS
+ * =================================================================================
+ */
+
+.button {
+    align-items: center;
+    background: var(--black-primary-color);
+    border: 2px solid var(--blue-primary-color);
+    border-radius: var(--box-default-border-radius);
+    color: var(--blue-primary-color);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 18px;
+    font-weight: 700;
+    height: 42px;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    text-decoration: none;
+    width: 100%;
+}
+
+.button:hover {
+    background: var(--blue-primary-color);
+    color: var(--white-color);
+}
+
+.button__icon {
+    color: var(--blue-primary-color);
+    font-size: 30px;
+}
+
+.button:hover .button__icon {
+    color: var(--white-color);
+}
+
+/**
+ * =================================================================================
+ * CONTAINER
+ * =================================================================================
+ */
+
+.container {
+    margin: 0 auto;
+    padding: 0 6px 0 6px;
+    width: 100%;
+}
+
+.contact-container {
+    margin: 0 auto;
+    max-width: 540px;
+}
+
+/**
+ * =================================================================================
+ * WINDOW OVERLAY
+ * =================================================================================
+ */
+
+.window-overlay {
+    background: var(--overlay-color);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+/**
+ * =================================================================================
+ * SIDE NAVIGATION
+ * =================================================================================
+ */
+
+.side-navigation {
+    background: var(--black-secondary-color);
+    height: 100vh;
+    left: -290px;
+    overflow: auto;
+    position: absolute;
+    transition: .5s;
+    width: 290px;
+}
+
+.side-navigation__top {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-bottom: 1px solid var(--blue-primary-color);
+    display: flex;
+    height: 86px;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    width: 100%;
+}
+
+.side-navigation__logo {
+    background: url(../img/logo.svg);
+    background-size: cover;
+    height: 56px;
+    text-indent: -9999px;
+    width: 214px;
+}
+
+.side-navigation__close-button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+
+.close-button__icon {
+    color: var(--blue-primary-color);
+    font-size: 28px;
+}
+
+.side-navigation__navigation {
+    margin: 0 0 98px 0;
+}
+
+.side-navigation__menu {
+    margin: 0 0 20px 0;
+    padding: 20px 40px 0 10px;
+}
+
+.side-navigation-menu__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-navigation-menu__list-item {
+    border-bottom: 1px solid var(--black-primary-color);
+    padding: 12px 0 12px 10px;
+}
+
+.side-navigation-menu__list-link {
+    color: var(--white-color);
+    font-family: var(--font-rajdhani);
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.side-navigation-menu__list-link:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+.side-navigation__search-box {
+    padding: 0 40px 0 10px;
+}
+
+.side-navigation__search-form {
+    position: relative;
+}
+
+.side-navigation__search-input {
+    background: var(--black-primary-color);
+    border: none;
+    border-radius: var(--header-input-border-radius);
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    outline: none;
+    padding: 0 40px 0 12px;
+    width: 100%;
+}
+
+.side-navigation__search-input:focus {
+    border: 2px solid var(--blue-primary-color);
+    padding: 0 calc(40px - 2px) 0 calc(12px - 2px);
+}
+
+.side-navigation__search-input::placeholder {
+    color: var(--gray-secondary-color);
+}
+
+.side-navigation__search-button {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+
+.side-navigation__search-button .search-button__icon {
+    color: var(--blue-primary-color);
+    font-size: 21px;
+}
+
+/**
+ * =================================================================================
+ * HEADER
+ * =================================================================================
+ */
+
+.header {
+    background: var(--black-primary-color);
+    border-bottom: 3px solid var(--blue-primary-color);
+    display: flex;
+    height: 83px;
+    width: 100%;
+}
+
+.header-wrapper {
+    display: flex;
+}
+
+.header__stick {
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.header__menu-button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 0 12px 0 0;
+    width: 40px;
+}
+
+.menu-button__icon {
+    color: var(--blue-primary-color);
+    font-size: 28px;
+}
+
+.header__logo {
+    background: url(../img/logo.svg);
+    background-size: cover;
+    height: 56px;
+    text-indent: -9999px;
+    width: 214px;
+}
+
+.header__navigation {
+    display: none;
+}
+
+.navigation__search-box {
+    align-items: center;
+    display: flex;
+}
+
+.navigation__search-form {
+    position: relative;
+}
+
+.navigation__search-input {
+    background: var(--black-secondary-color);
+    border: none;
+    border-radius: var(--header-input-border-radius);
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    outline: none;
+    padding: 0 40px 0 12px;
+    width: 240px;
+}
+
+.navigation__search-input:focus {
+    border: 2px solid var(--blue-primary-color);
+    padding: 0 calc(40px - 2px) 0 calc(12px - 2px);
+}
+
+.navigation__search-input::placeholder {
+    color: var(--gray-secondary-color);
+}
+
+.navigation__search-button {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+
+.navigation__search-button .search-button__icon {
+    color: var(--blue-primary-color);
+    font-size: 21px;
+}
+
+.navigation__menu {
+    align-items: center;
+    display: none;
+    margin: 0 30px 0 0;
+}
+
+.menu__list {
+    column-gap: 20px;
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.menu__list-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.menu__list-link:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+/**
+ * =================================================================================
+ * BREADCRUMBS
+ * =================================================================================
+ */
+
+.breadcrumbs {
+    color: var(--disabled-primary-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0 5px 0;
+    word-break: break-word;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+}
+
+.breadcrumbs__link:hover {
+    text-decoration: underline;
+}
+
+/**
+ * =================================================================================
+ * MAIN
+ * =================================================================================
+ */
+
+.main {
+    margin: 0 auto 110px !important;
+}
+
+/**
+ * =================================================================================
+ * GROUP (COLUMNS)
+ * =================================================================================
+ */
+
+.content-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/**
+ * =================================================================================
+ * CONTENT BOX
+ * =================================================================================
+ */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.content-box {
+    background: var(--black-secondary-color);
+    border-radius: var(--content-box-border-radius);
+    border-top: 6px solid var(--blue-primary-color);
+    height: 100%;
+    padding: 56px 12px 20px 12px;
+    position: relative;
+}
+
+.content-box__heading-box {
+    align-items: center;
+    background: var(--blue-primary-color);
+    border-radius: var(--content-box-title-border-radius);
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    left: 0;
+    padding: 0 18px 0 18px;
+    position: absolute;
+    top: -6px;
+}
+
+.content-box__heading {
+    color: var(--white-color);
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/**
+ * =================================================================================
+ * ASIDE
+ * =================================================================================
+ */
+
+.aside {
+    height: 100%;
+    width: 100%;
+}
+
+/**
+ * =================================================================================
+ * SINGLE MANGA
+ * =================================================================================
+ */
+
+.single-manga-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/**
+ * =================================================================================
+ * SINGLE MANGA (SUMMARY)
+ * =================================================================================
+ */
+
+.single-manga-summary {
+    display: grid;
+    grid-template-areas: 'cover' 'summary' 'synopsis';
+    width: 100%;
+}
+
+.single-manga__cover-box {
+    display: flex;
+    grid-area: cover;
+    justify-content: center;
+}
+
+.single-manga__cover-outside {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    display: flex;
+    height: 379px;
+    justify-content: center;
+    width: 250px;
+}
+
+.single-manga__cover {
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    height: 373px;
+    width: 244px;
+}
+
+.single-manga__img {
+    border-radius: var(--box-default-border-radius);
+    height: 373px;
+    width: 244px;
+}
+
+.single-manga__summary {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: summary;
+    padding: 16px 0 0 0;
+}
+
+.single-manga__title {
+    color: var(--white-color);
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 29px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    word-break: break-word;
+}
+
+.single-manga__status {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 15px;
+    font-weight: 700;
+    height: 28px;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    padding: 0 13px 0 13px;
+    text-transform: uppercase;
+}
+
+.manga-summary-genres__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.manga-summary-genres__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 15px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    padding: 0 11px 0 11px;
+    text-decoration: none;
+}
+
+.manga-summary-genres__list-link:hover {
+    background-color: var(--white-color);
+}
+
+.single-manga__synopsis {
+    grid-area: synopsis;
+    margin: 18px 0 0 0;
+}
+
+.synopsis__text {
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/**
+ * =================================================================================
+ * SINGLE MANGA (TABLE)
+ * =================================================================================
+ */
+
+.single-manga-table {
+    display: none;
+}
+
+.single-manga__table {
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.table__tr {
+    border-top: 1px solid var(--black-primary-color);
+    display: flex;
+}
+
+.table__tr:last-child {
+    border-bottom: 1px solid var(--black-primary-color);
+}
+
+.table__tr th {
+    color: var(--white-color);
+    line-height: 1.3;
+    width: 188px;
+}
+
+.table__tr td {
+    color: var(--gray-tertiary-color);
+    flex: 1;
+    line-height: 1.3;
+}
+
+.table__tr td a {
+    color: var(--gray-tertiary-color);
+    text-decoration: none;
+}
+
+.table__tr td a:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+.table__tr th,
+.table__tr td {
+    padding: 7px 12px 7px 12px;
+    text-align: start;
+}
+
+/**
+ * =================================================================================
+ * CHAPTERS
+ * =================================================================================
+ */
+
+.chapters-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.chapters__item {
+    align-items: center;
+    border-bottom: 1px solid var(--black-primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+}
+
+.chapters__item:first-child {
+    padding: 0 0 10px 0;
+}
+
+.chapters__item:last-child {
+    border-bottom: none;
+    padding: 10px 0 0 0;
+}
+
+.chapters__stick {
+    align-items: center;
+    display: flex;
+}
+
+.chapters__chapter-date {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--gray-tertiary-color);
+    display: none;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 16px;
+    font-weight: 400;
+    height: 42px;
+    justify-content: center;
+    margin: 0 20px 0 0;
+    width: 90px;
+}
+
+.chapters__division-line {
+    background: var(--black-primary-color);
+    display: none;
+    height: 42px;
+    margin: 0 20px 0 0;
+    width: 1px;
+}
+
+.chapters__chapter-link {
+    color: var(--white-color);
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+}
+
+.chapters__chapter-link:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+.chapters__chapter-scan {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px 0 0;
+}
+
+.chapter-scan__icon {
+    align-items: center;
+    color: var(--blue-primary-color);
+    display: flex;
+    font-size: 16px;
+    height: 18px;
+    justify-content: center;
+    margin: 0 0 9px 0;
+    width: 18px;
+}
+
+.chapter-scan__name {
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/**
+ * =================================================================================
+ * HIGHLIGHTS (SWIPER)
+ * =================================================================================
+ */
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    width: 122px;
+}
+
+.swiper-slide__cover-outside {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    display: flex;
+    height: 193px;
+    justify-content: center;
+    width: 122px;
+}
+
+.swiper-slide__cover {
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    height: 189px;
+    position: relative;
+    width: 118px;
+}
+
+.swiper-slide__img {
+    border-radius: var(--box-default-border-radius);
+    height: 189px;
+    opacity: .92;
+    width: 118px;
+}
+
+.swiper-slide__img:hover {
+    opacity: 1;
+}
+
+.swiper-slide__chapter {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--highlights-chapter-box-border-radius);
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 18px;
+    font-weight: 700;
+    height: 32px;
+    justify-content: center;
+    opacity: .8;
+    padding: 0 14px 0 14px;
+    position: absolute;
+    text-decoration: none;
+    top: 16px;
+}
+
+.swiper-slide__chapter:hover {
+    opacity: .86;
+}
+
+.swiper-slide__title-box {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 17px;
+    font-weight: 700;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    padding: 14px 10px 14px 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 122px;
+    word-break: break-word;
+}
+
+.swiper-slide__title-box:hover {
+    color: var(--blue-primary-color);
+}
+
+/**
+ * =================================================================================
+ * LETTERS
+ * =================================================================================
+ */
+
+.letters__list {
+    column-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.letters__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 14px;
+    font-weight: 700;
+    height: 32px;
+    justify-content: center;
+    text-decoration: none;
+    width: 32px;
+}
+
+.letters__list-link:hover {
+    background: var(--white-color);
+}
+
+span.letters__list-link:hover {
+    background: var(--black-primary-color);
+}
+
+/**
+ * =================================================================================
+ * GENRES
+ * =================================================================================
+ */
+
+.genres__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.genres__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 15px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    padding: 0 11px 0 11px;
+    text-decoration: none;
+}
+
+.genres__list-link:hover {
+    background: var(--white-color);
+}
+
+/**
+ * =================================================================================
+ * CONTACT (FORM)
+ * =================================================================================
+ */
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+}
+
+.form__label {
+    color: var(--blue-primary-color);
+    font-family: var(--font-rajdhani);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    padding: 0 0 0 3px;
+}
+
+.form__input {
+    background: var(--black-primary-color);
+    border: none;
+    border-radius: var(--box-default-border-radius);
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    outline: none;
+    padding: 0 14px 0 14px;
+    width: 100%;
+}
+
+.form__input:focus {
+    border: 2px solid var(--blue-primary-color);
+    padding: 0 calc(14px - 2px) 0 calc(14px - 2px);
+}
+
+.form__input::placeholder {
+    color: var(--gray-secondary-color);
+}
+
+.form__textarea {
+    background: var(--black-primary-color);
+    border: none;
+    border-radius: var(--box-default-border-radius);
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 16px;
+    font-weight: 400;
+    height: 128px;
+    outline: none;
+    padding: 12px 14px 12px 14px;
+    resize: none;
+    width: 100%;
+}
+
+.form__textarea:focus {
+    border: 2px solid var(--blue-primary-color);
+    padding: calc(12px - 2px) calc(14px - 2px) calc(12px - 2px) calc(14px - 2px);
+}
+
+.form__textarea::placeholder {
+    color: var(--gray-secondary-color);
+}
+
+/**
+ * =================================================================================
+ * MANGAS LIST
+ * =================================================================================
+ */
+
+.mangas-list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.mangas-list__item {
+    border-bottom: 1px solid var(--black-primary-color);
+    display: flex;
+    padding: 20px 0 20px 0;
+    width: 100%;
+}
+
+.mangas-list__item:first-child {
+    padding: 0 0 20px 0;
+}
+
+.mangas-list__item:last-child {
+    border-bottom: none;
+    padding: 20px 0 0 0;
+}
+
+.mangas-list__cover-outside {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    display: flex;
+    height: 147px;
+    justify-content: center;
+    margin: 0 14px 0 0;
+    width: 97px;
+}
+
+.mangas-list__cover {
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    height: 143px;
+    width: 93px;
+}
+
+.mangas-list__img {
+    border-radius: var(--box-default-border-radius);
+    height: 143px;
+    opacity: .92;
+    width: 93px;
+}
+
+.mangas-list__img:hover {
+    opacity: 1;
+}
+
+.mangas-list__summary {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px 6px 0 0;
+    width: 100%;
+}
+
+.mangas-list__title {
+    color: var(--white-color);
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.mangas-list__title:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+.mangas-list__status {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 15px;
+    font-weight: 700;
+    height: 28px;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    padding: 0 13px 0 13px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.item-summary-chapters__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item-summary-chapters__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--newly-added-chapter-box-border-radius);
+    border-top: 2px solid var(--blue-primary-color);
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 19px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    padding: 0 11px 0 11px;
+    text-decoration: none;
+}
+
+.item-summary-chapters__list-link:hover {
+    background: var(--white-color);
+    color: var(--blue-primary-color);
+}
+
+.item-summary-genres__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.item-summary-genres__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 14px;
+    font-weight: 700;
+    height: 28px;
+    justify-content: center;
+    padding: 0 7px 0 7px;
+    text-decoration: none;
+}
+
+.item-summary-genres__list-link:hover {
+    background: var(--white-color);
+    color: var(--blue-primary-color);
+}
+
+.mangas-list__description {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0 0 0;
+    row-gap: 10px;
+}
+
+.mangas-list__description-item {
+    align-items: center;
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-roboto-condensed);
+    font-size: 14px;
+    font-weight: 400;
+    height: 16px;
+}
+
+.description__icon-box {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    margin: 0 4px 0 0;
+    width: 16px;
+}
+
+.description__icon {
+    color: var(--blue-primary-color);
+    font-size: 12px;
+}
+
+/**
+ * =================================================================================
+ * SEARCH
+ * =================================================================================
+ */
+
+.search__search-box {
+    border-bottom: 1px solid var(--black-primary-color);
+    padding: 0 0 20px 0;
+}
+
+.search__search-form {
+    position: relative;
+}
+
+.search__search-input {
+    background: var(--black-primary-color);
+    border: none;
+    border-radius: var(--box-default-border-radius);
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 18px;
+    font-weight: 400;
+    height: 54px;
+    outline: none;
+    padding: 0 54px 0 20px;
+    width: 100%;
+}
+
+.search__search-input:focus {
+    border: 2px solid var(--blue-primary-color);
+    padding: 0 calc(54px - 2px) 0 calc(20px - 2px);
+}
+
+.search__search-button {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 54px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 54px;
+}
+
+.search__search-button .search-button__icon {
+    color: var(--blue-primary-color);
+    font-size: 22px;
+}
+
+/**
+ * =================================================================================
+ * RANKING
+ * =================================================================================
+ */
+
+.ranking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.ranking__item {
+    border-bottom: 1px solid var(--black-primary-color);
+    display: flex;
+    padding: 20px 0 20px 0;
+    width: 100%;
+}
+
+.ranking__item:first-child {
+    padding: 0 0 20px 0;
+}
+
+.ranking__item:last-child {
+    border-bottom: none;
+    padding: 20px 0 0 0;
+}
+
+.ranking__position-area {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 38px;
+}
+
+.ranking__position {
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 19px;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.ranking__cover-outside {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    display: flex;
+    height: 136px;
+    justify-content: center;
+    margin: 0 10px 0 0;
+    width: 90px;
+}
+
+.ranking__cover {
+    background-color: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    height: 132px;
+    width: 86px;
+}
+
+.ranking__img {
+    border-radius: var(--box-default-border-radius);
+    height: 132px;
+    opacity: .92;
+    width: 86px;
+}
+
+.ranking__img:hover {
+    opacity: 1;
+}
+
+.ranking__summary {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4px 0 0;
+}
+
+.ranking__title {
+    color: var(--white-color);
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.ranking__title:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+.ranking__chapters {
+    color: var(--gray-tertiary-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/**
+ * =================================================================================
+ * GENRES (ASIDE)
+ * =================================================================================
+ */
+
+.aside-genres__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.aside-genres__list-item {
+    display: none;
+}
+
+.aside-genres__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--mini-box-default-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 15px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    padding: 0 11px 0 11px;
+    text-decoration: none;
+}
+
+.aside-genres__list-link:hover {
+    background: var(--white-color);
+}
+
+/**
+ * =================================================================================
+ * FILTER
+ * =================================================================================
+ */
+
+.filter-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+}
+
+.filter__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.filter__heading {
+    align-items: center;
+    border-bottom: 1px solid var(--black-primary-color);
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 23px;
+    font-weight: 700;
+    height: 34px;
+    text-transform: uppercase;
+}
+
+.filter__list {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0 0 0;
+}
+
+.filter__list-item {
+    align-items: center;
+    display: flex;
+    padding: 5px 0 5px 0;
+}
+
+.filter__list-link {
+    color: var(--gray-tertiary-color);
+    font-family: var(--font-pt-sans-narrow);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.filter__list-link:hover {
+    color: var(--blue-primary-color);
+    text-decoration: underline;
+}
+
+span.filter__list-link:hover {
+    color: var(--gray-tertiary-color);
+    text-decoration: none;
+}
+
+/**
+ * =================================================================================
+ * PAGINATION
+ * =================================================================================
+ */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination__list {
+    column-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 14px;
+}
+
+.pagination__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--box-default-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-family: var(--font-rajdhani);
+    font-size: 17px;
+    font-weight: 700;
+    height: 40px;
+    justify-content: center;
+    text-decoration: none;
+    width: 40px;
+}
+
+.pagination__list-link:hover {
+    background: var(--white-color);
+}
+
+span.pagination__list-link {
+    color: var(--disabled-secondary-color);
+}
+
+span.pagination__list-link:hover {
+    background: var(--black-primary-color);
+    color: var(--disabled-secondary-color);
+}
+
+/**
+ * =================================================================================
+ * FOOTER
+ * =================================================================================
+ */
+
+.footer {
+    background: var(--black-secondary-color);
+    border-top: 4px solid var(--blue-primary-color);
+    display: flex;
+    height: 100%;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__top {
+    align-items: center;
+    border-bottom: 1px solid var(--black-primary-color);
+    display: flex;
+    height: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.footer__logo {
+    background: url(../img/single-logo.svg);
+    background-size: cover;
+    height: 58px;
+    margin: 0 20px 0 0;
+    text-indent: -9999px;
+    width: 58px;
+}
+
+.footer__division-line {
+    background: var(--black-primary-color);
+    display: block;
+    height: 58px;
+    margin: 0 20px 0 0;
+    width: 1px;
+}
+
+.footer__socials {
+    flex: 1;
+    width: 100%;
+}
+
+.socials__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.socials__list-link {
+    align-items: center;
+    background: var(--black-primary-color);
+    border-radius: var(--footer-socials-border-radius);
+    color: var(--blue-primary-color);
+    display: flex;
+    font-size: 18px;
+    height: 34px;
+    justify-content: center;
+    text-decoration: none;
+    width: 34px;
+}
+
+.socials__list-link:hover {
+    color: var(--white-color);
+}
+
+.footer__copy {
+    padding: 12px 0 12px 0;
+}
+
+.copy__text {
+    color: var(--white-color);
+    font-family: var(--font-roboto-condensed);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    word-break: break-word;
+}
+
+.copy__link {
+    text-decoration: none;
+}
+
+.copy__link:hover {
+    text-decoration: underline;
+}
+
+/**
+ * =================================================================================
+ * MEDIA QUERIES (MOBILE FIRST)
+ * =================================================================================
+ */
+
+@media screen and (min-width: 402px) {
+    .chapters__item {
+        padding: 16px 0 16px 0;
+    }
+
+    .chapters__item:first-child {
+        padding: 0 0 16px 0;
+    }
+
+    .chapters__item:last-child {
+        padding: 16px 0 0 0;
+    }
+
+    .chapters__chapter-date {
+        display: flex;
+    }
+
+    .chapters__division-line {
+        display: block;
+    }
+
+    .chapters__chapter-link {
+        padding: 0 0 0 0;
+    }
+}
+
+@media screen and (min-width: 435px) {
+    .ranking__position-area {
+        width: 38px;
+    }
+
+    .ranking__position {
+        font-size: 19px;
+    }
+
+    .ranking__title {
+        font-size: 22px;
+    }
+
+    .ranking__chapters {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 458px) {
+    .item-summary-genres__list-link {
+        height: 32px;
+        padding: 0 9px 0 9px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .ranking-wrapper {
+        column-gap: 19px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ranking__item,
+    .ranking__item:first-child,
+    .ranking__item:last-child {
+        border-bottom: 1px solid var(--black-primary-color);
+        padding: 20px 0 20px 0;
+    }
+
+    .ranking__item:nth-child(1),
+    .ranking__item:nth-child(2) {
+        padding: 0 0 20px 0;
+    }
+
+    .ranking__item:nth-child(7),
+    .ranking__item:nth-child(8) {
+        border-bottom: none;
+        padding: 20px 0 0 0;
+    }
+
+    .ranking__position-area {
+        width: 36px;
+    }
+
+    .ranking__position {
+        font-size: 18px;
+    }
+
+    .ranking__cover-outside {
+        height: 115px;
+        width: 76px;
+    }
+
+    .ranking__cover,
+    .ranking__img {
+        height: 111px;
+        width: 72px;
+    }
+
+    .ranking__title {
+        font-size: 18px;
+    }
+
+    .ranking__chapters {
+        font-size: 13px;
+    }
+
+    .filter-wrapper {
+        column-gap: 19px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 0;
+    }
+}
+
+@media screen and (min-width: 566px) {
+    .container {
+        padding: 0 10px 0 10px;
+    }
+
+    .header-wrapper {
+        justify-content: space-between;
+        padding: 0 10px 0 10px;
+    }
+
+    .header__navigation {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 592px) {
+    .item-summary-genres__list {
+        gap: 10px;
+    }
+
+    .item-summary-genres__list-link {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 10px 0 10px;
+    }
+
+    .ranking__position-area {
+        width: 38px;
+    }
+
+    .ranking__position {
+        font-size: 19px;
+    }
+
+    .ranking__cover-outside {
+        height: 136px;
+        width: 90px;
+    }
+
+    .ranking__cover,
+    .ranking__img {
+        height: 132px;
+        width: 86px;
+    }
+
+    .ranking__title {
+        font-size: 21px;
+    }
+
+    .ranking__chapters {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 632px) {
+    .single-manga-summary {
+        grid-template-areas: 'cover summary' 'synopsis synopsis';
+        grid-template-columns: calc(145px + 20px) auto;
+        margin: 0 0 20px 0;
+    }
+
+    .single-manga__cover-box {
+        width: 145px;
+    }
+
+    .single-manga__cover-outside {
+        height: 220px;
+        width: 145px;
+    }
+
+    .single-manga__cover {
+        height: 214px;
+        width: 139px;
+    }
+
+    .single-manga__img {
+        height: 214px;
+        width: 139px;
+    }
+
+    .single-manga__summary {
+        align-items: start;
+        padding: 14px 6px 0 0;
+    }
+
+    .manga-summary-genres__list {
+        justify-content: start;
+    }
+
+    .single-manga__synopsis {
+        margin: 20px 0 0 0;
+        padding: 0 6px 0 0;
+    }
+
+    .synopsis__text {
+        text-align: start;
+    }
+
+    .single-manga-table {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 834px) {
+    .single-manga-summary {
+        grid-template-areas: 'cover summary' 'cover synopsis';
+        grid-template-rows: auto 1fr;
+    }
+
+    .single-manga__synopsis {
+        padding: 0 6px 0 0;
+    }
+
+    .chapters__chapter-date {
+        width: 108px;
+    }
+}
+
+@media screen and (min-width: 776px) {
+    .ranking__title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 796px) {
+    .responsive--flex-1 {
+        flex: 1 !important;
+    }
+
+    .content-wrapper {
+        column-gap: 30px;
+        flex-direction: row;
+        row-gap: 0;
+    }
+
+    .aside {
+        width: 300px;
+    }
+
+    .ranking-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .ranking__item:nth-child(1) {
+        padding: 0 0 20px 0;
+    }
+
+    .ranking__item:nth-child(2) {
+        padding: 20px 0 20px 0;
+    }
+
+    .ranking__item:nth-child(7) {
+        border-bottom: 1px solid var(--black-primary-color);
+        padding: 20px 0 20px 0;
+    }
+
+    .filter-wrapper {
+        column-gap: 0;
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+}
+
+@media screen and (min-width: 862px) {
+    .swiper-slide {
+        width: 146px;
+    }
+
+    .swiper-slide__cover-outside {
+        height: 221px;
+        width: 146px;
+    }
+
+    .swiper-slide__cover,
+    .swiper-slide__img {
+        height: 217px;
+        width: 142px;
+    }
+
+    .swiper-slide__chapter {
+        height: 36px;
+    }
+
+    .swiper-slide__title-box {
+        width: 146px;
+    }
+
+    .genres__list {
+        gap: 14px;
+    }
+
+    .genres__list-link {
+        font-size: 17px;
+        height: 40px;
+    }
+
+    .mangas-list__cover-outside {
+        height: 190px;
+        margin: 0 18px 0 0;
+        width: 125px;
+    }
+
+    .mangas-list__cover,
+    .mangas-list__img {
+        height: 186px;
+        width: 121px;
+    }
+
+    .mangas-list__summary {
+        padding: 12px 6px 0 0;
+    }
+
+    .mangas-list__title {
+        font-size: 24px;
+    }
+
+    .item-summary-chapters__list-link {
+        font-size: 20px;
+        height: 38px;
+        padding: 0 12px 0 12px;
+    }
+
+    .item-summary-genres__list {
+        gap: 12px;
+    }
+
+    .item-summary-genres__list-link {
+        height: 36px;
+        padding: 0 11px 0 11px;
+    }
+
+    .mangas-list__description-item {
+        font-size: 14px;
+        height: 18px;
+    }
+
+    .description__icon-box {
+        height: 18px;
+        width: 18px;
+    }
+
+    .description__icon {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 20px 0 20px;
+    }
+
+    .header__menu-button {
+        display: none;
+    }
+
+    .navigation__menu {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content-box {
+        padding: 56px 20px 20px 20px;
+    }
+
+    .single-manga-summary {
+        grid-template-areas: 'cover summary' 'cover synopsis';
+        grid-template-columns: calc(201px + 20px) auto;
+        grid-template-rows: auto 1fr;
+    }
+
+    .single-manga__cover-box {
+        width: 201px;
+    }
+
+    .single-manga__cover-outside {
+        height: 305px;
+        width: 201px;
+    }
+
+    .single-manga__cover {
+        height: 297px;
+        width: 193px;
+    }
+
+    .single-manga__img {
+        height: 297px;
+        width: 193px;
+    }
+
+    .single-manga__summary {
+        padding: 18px 8px 0 0;
+    }
+
+    .single-manga__title {
+        font-size: 34px;
+        margin: 0 0 14px 0;
+    }
+
+    .single-manga__status {
+        font-size: 17px;
+        height: 32px;
+        padding: 0 13px 0 13px;
+        margin: 0 0 16px 0;
+    }
+
+    .manga-summary-genres__list {
+        gap: 14px;
+    }
+
+    .manga-summary-genres__list-link {
+        font-size: 17px;
+        height: 40px;
+    }
+
+    .single-manga__synopsis {
+        margin: 16px 0 0 0;
+        padding: 0 8px 0 0;
+    }
+
+    .table__tr th {
+        width: 224px;
+    }
+}

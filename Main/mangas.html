@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mangasXP - Leitor de mangás online pt-BR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="window-overlay">
+        <section class="side-navigation">
+            <div class="side-navigation__top">
+                <a href="./index.html" class="side-navigation__logo">mangasXP</a>
+                <div class="side-navigation__close-button" id="closeSideNavigation">
+                    <i class="fa-solid fa-xmark close-button__icon"></i>
+                </div>
+            </div>
+            <div class="side-navigation__navigation">
+                <nav class="side-navigation__menu">
+                    <ul class="side-navigation-menu__list">
+                        <li class="side-navigation-menu__list-item">
+                            <a href="./index.html" class="side-navigation-menu__list-link">Home</a>
+                        </li>
+                        <li class="side-navigation-menu__list-item">
+                            <a href="./mangas.html" class="side-navigation-menu__list-link">Mangás</a>
+                        </li>
+                        <li class="side-navigation-menu__list-item">
+                            <a href="." class="side-navigation-menu__list-link">Gêneros</a>
+                        </li>
+                        <li class="side-navigation-menu__list-item">
+                            <a href="" class="side-navigation-menu__list-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="side-navigation__search-box">
+                    <form action="./search-results.html" class="side-navigation__search-form">
+                        <input type="text" class="side-navigation__search-input" placeholder="Pesquisar...">
+                        <button type="submit" class="side-navigation__search-button">
+                            <i class="fa-solid fa-magnifying-glass search-button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <header class="header">
+        <div class="header-wrapper container">
+            <div class="header__stick">
+                <div class="header__menu-button" id="openSideNavigation">
+                    <i class="fa-solid fa-bars menu-button__icon"></i>
+                </div>
+                <a href="./index.html" class="header__logo">mangasXP</a>
+            </div>
+            <div class="header__navigation">
+                <nav class="navigation__menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="./index.html" class="menu__list-link">Home</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="./mangas.html" class="menu__list-link">Mangás</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="" class="menu__list-link">Gêneros</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="" class="menu__list-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navigation__search-box">
+                    <form action="" class="navigation__search-form">
+                        <input type="text" class="navigation__search-input" placeholder="Pesquisar...">
+                        <button type="submit" class="navigation__search-button">
+                            <i class="fa-solid fa-magnifying-glass search-button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mb--40">
+        <p class="breadcrumbs"><a href="./index.html" class="breadcrumbs__link text--blue">Home</a> » <a href="./mangas.html" class="breadcrumbs__link text--blue">Mangás</a> » <span class="text--white">Jujutsu Kaisen</span></p>
+    </div>
+    <main class="main container">
+        <section class="content-box pt--18 mb--40">   
+            <div class="single-manga-wrapper">
+                <div class="single-manga-summary">
+                    <div class="single-manga__cover-box">
+                        <div class="single-manga__cover-outside">
+                            <div class="single-manga__cover">
+                                <img src="" class="single-manga__img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-manga__summary">
+                        <h1 class="single-manga__title"></h1>
+                        <span class="single-manga__status text--orange">Em Publicação</span>
+                        <div class="single-manga__genres">
+                            <ul class="manga-summary-genres__list">
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Ação</a>
+                                </li>
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Demônios</a>
+                                </li>
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Escolar</a>
+                                </li>
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Fantasia</a>
+                                </li>
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Magia</a>
+                                </li>
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Shounen</a>
+                                </li>
+                                <li class="manga-summary-genres__list-item">
+                                    <a href="./mangas.html" class="manga-summary-genres__list-link">Sobrenatural</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-manga__synopsis">
+                        <p class="synopsis__text"></p>
+                    </div>
+                </div>
+                <div class="single-manga-table">
+                    <table class="single-manga__table">
+                        <tbody>
+                            <tr class="table__tr">
+                                <th>Tipo:</th>
+                                <td>Mangá</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <th>Gênero(s):</th>
+                                <td>
+                                    <a href="./mangas.html">Ação</a>, <a href="./mangas.html">Demônios</a>, <a href="./mangas.html">Escolar</a>, <a href="./mangas.html">Fantasia</a>, <a href="./mangas.html">Magia</a>, <a href="./mangas.html">Shounen</a>, <a href="./mangas.html">Sobrenatural</a>
+                                </td>
+                            </tr>
+                            <tr class="table__tr">
+                                <th>Status:</th>
+                                <td>Em Publicação</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <th>Autor(es):</th>
+                                <td></td>
+                            </tr>
+                            <tr class="table__tr">
+                                <th>Arte:</th>
+                                <td></td>
+                            </tr>
+                            <tr class="table__tr">
+                                <th>Ano de Publicação</th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>        
+        </section>
+        <section class="content-box">
+            <div class="content-box__heading-box">
+                <h1 class="content-box__heading">Capítulos</h1>
+            </div>
+            <div class="chapters-wrapper">
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date">HOJE</span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link">Capítulo #</a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date">0</span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link">Capítulo #223</a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date"></span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link"></a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date"></span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link">Capítulo #</a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date"></span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link">Capítulo #</a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date"></span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link"></a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="chapters__item">
+                    <div class="chapters__stick">
+                        <div class="chapters__chapter-date">
+                            <span class="chapter-date"></span>
+                        </div>
+                        <span class="chapters__division-line"></span>
+                        <a href="" class="chapters__chapter-link">Capítulo #</a>
+                    </div>
+                    <div class="chapters__chapter-scan">
+                        <div class="chapter-scan__icon">
+                            <i class="fa-sharp fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="chapter-scan__name">ScanBR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-wrapper container">
+            <div class="footer__top">
+                <a href="./index.html" class="footer__logo">mangasXXX</a>
+                <span class="footer__division-line"></span>
+                <div class="footer__socials">
+                    <ul class="socials__list">
+                        <li class="socials__list-item">
+                            <a href="#" class="socials__list-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="socials__list-item">
+                            <a href="#" class="socials__list-link"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li class="socials__list-item">
+                            <a href="#" class="socials__list-link"><i class="fa-brands fa-discord"></i></a>
+                        </li>
+                        <li class="socials__list-item">
+                            <a href="" class="socials__list-link"><i class="fa-solid fa-envelope"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copy"> 
+                <p class="copy__text"><a href="./index.html" class="copy__link text--blue">mangasXXX</a> © 2025 | Made by: <a href="" class="copy__link text--red">ANALIVIA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mangasXXX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="window-overlay">
+        <section class="side-navigation">
+            <div class="side-navigation__top">
+                <a href="./index.html" class="side-navigation__logo">mangasXXX</a>
+                <div class="side-navigation__close-button" id="closeSideNavigation">
+                    <i class="fa-solid fa-xmark close-button__icon"></i>
+                </div>
+            </div>
+            <div class="side-navigation__navigation">
+                <nav class="side-navigation__menu">
+                    <ul class="side-navigation-menu__list">
+                        <li class="side-navigation-menu__list-item">
+                            <a href="./index.html" class="side-navigation-menu__list-link">Home</a>
+                        </li>
+                        <li class="side-navigation-menu__list-item">
+                            <a href="./mangas.html" class="side-navigation-menu__list-link">Mangás</a>
+                        </li>
+                        <li class="side-navigation-menu__list-item">
+                            <a href="./genres.html" class="side-navigation-menu__list-link">Gêneros</a>
+                        </li>
+                        <li class="side-navigation-menu__list-item">
+                            <a href="./contact.html" class="side-navigation-menu__list-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="side-navigation__search-box">
+                    <form action="./search-results.html" class="side-navigation__search-form">
+                        <input type="text" class="side-navigation__search-input" placeholder="Pesquisar...">
+                        <button type="submit" class="side-navigation__search-button">
+                            <i class="fa-solid fa-magnifying-glass search-button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <header class="header mb--40">
+        <div class="header-wrapper container">
+            <div class="header__stick">
+                <div class="header__menu-button" id="openSideNavigation">
+                    <i class="fa-solid fa-bars menu-button__icon"></i>
+                </div>
+                <a href="./index.html" class="header__logo">mangasXXX</a>
+            </div>
+            <div class="header__navigation">
+                <nav class="navigation__menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="./index.html" class="menu__list-link">Home</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="./mangas.html" class="menu__list-link">Mangás</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="./genres.html" class="menu__list-link">Gêneros</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="./contact.html" class="menu__list-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navigation__search-box">
+                    <form action="./search-results.html" class="navigation__search-form">
+                        <input type="text" class="navigation__search-input" placeholder="Pesquisar...">
+                        <button type="submit" class="navigation__search-button">
+                            <i class="fa-solid fa-magnifying-glass search-button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main container">
+        <section class="content-box mb--40">
+            <div class="content-box__heading-box">
+                <h1 class="content-box__heading">Destaques</h1>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/one-piece.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">1085</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">A</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/tower-of-god-season-3.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">149</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">C</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/jujutsu-kaisen.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">224</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">d</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">80</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">d</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">686</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">B</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/kimetsu-no-yaiba.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">205.5</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">c</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/fairy-tail.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">545</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">d</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/one-punch-man.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">220</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">e</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">700.11</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">d</a>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__cover-outside">
+                            <div class="swiper-slide__cover">
+                                <a href="./manga.html">
+                                    <img src="./assets/img/covers/fairy-tail-100-years-quest.png" class="swiper-slide__img">
+                                </a>
+                                <a href="https://eubrunocoelho.github.io/manga-reader/" class="swiper-slide__chapter">134</a>
+                            </div>
+                        </div>
+                        <a href="./manga.html" class="swiper-slide__title-box">d</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="content-wrapper">
+            <section class="content-box responsive--flex-1">
+                <div class="content-box__heading-box">
+                </div>
+                <div class="mangas-list-wrapper">
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        </div>
+                        <
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-layer-group description__icon"></i></span>ScanBR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-layer-group description__icon"></i></span>OPex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-layer-group description__icon"></i></span>explore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mangas-list__summary">
+                            <a href="./manga.html" class="mangas-list__title">e</a>
+                            <div class="mangas-list__chapters">
+                                <ul class="item-summary-chapters__list">
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">149</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">148</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mangas-list__summary">
+                            <a href="./manga.html" class="mangas-list__title">B</a>
+                            <div class="mangas-list__chapters">
+                                <ul class="item-summary-chapters__list">
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">686</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">685</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">684</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">683</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-layer-group description__icon"></i></span>ScanBR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mangas-list__summary">
+                            <a href="./manga.html" class="mangas-list__title">A</a>
+                            <div class="mangas-list__chapters">
+                                <ul class="item-summary-chapters__list">
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">1085</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">1084</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">1083</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">1082</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">1081</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-layer-group description__icon"></i></span>OPex</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mangas-list__summary">
+                            <a href="./manga.html" class="mangas-list__title">d</a>
+                            <div class="mangas-list__chapters">
+                                <ul class="item-summary-chapters__list">
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">700.11</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">700.10</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">700.9</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">700.8</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-layer-group description__icon"></i></span>explore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="mangas-list__item">
+                        <div class="mangas-list__cover-outside">
+                            <div class="mangas-list__cover">
+                                <a href="./manga.html">
+                                    <img src="" class="mangas-list__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mangas-list__summary">
+                            <a href="./manga.html" class="mangas-list__title">d</a>
+                            <div class="mangas-list__chapters">
+                                <ul class="item-summary-chapters__list">
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">149</a>
+                                    </li>
+                                    <li class="item-summary-chapters__list-item">
+                                        <a href="https://eubrunocoelho.github.io/manga-reader/" class="item-summary-chapters__list-link">148</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mangas-list__description">
+                                <p class="mangas-list__description-item"><span class="description__icon-box"><i class="fa-solid fa-hourglass-end description__icon"></i></span>Hoje</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button--icon-height"><i class="fa-solid fa-ellipsis button__icon"></i></button>
+            </section>
+            <aside class="content-box aside">
+                <div class="content-box__heading-box">
+                  
+                </div>
+                <!-- estilo de ranking adaptado para 8 itens -->
+                
+    </main>
+    <footer class="footer">
+        <div class="footer-wrapper container">
+            <div class="footer__top">
+                <a href="./index.html" class="footer__logo">mangasXP</a>
+                <span class="footer__division-line"></span>
+                <div class="footer__socials">
+                    <ul class="socials__list">
+                        <li class="socials__list-item">
+                            <a href="#" class="socials__list-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li class="socials__list-item">
+                            <a href="#" class="socials__list-link"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li class="socials__list-item">
+                            <a href="#" class="socials__list-link"><i class="fa-brands fa-discord"></i></a>
+                        </li>
+                        <li class="socials__list-item">
+                            <a href="./contact.html" class="socials__list-link"><i class="fa-solid fa-envelope"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copy"> 
+                <p class="copy__text"><a href="./index.html" class="copy__link text--blue">mangasXP</a> © 2023 | Made by: <a href="Analivia" class="copy__link text--red">Analivia</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
